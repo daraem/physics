@@ -22,14 +22,11 @@ int main() {
 
         circle.shape.setPosition(circle.posicionParticula);
         circle.shape.setFillColor(sf::Color(std::rand() % 256, std::rand() % 256, std::rand() % 256)); // Color aleatorio
-        // circle.velocidad.x = float(std::rand() % 200);
-        circle.velocidad.y = float(std::rand() % 500);
         circle.velocidad.y = 10.f;
         circles.push_back(circle);
     }
 
     while (window.isOpen()) {
-
         sf::Event event;
         while (window.pollEvent(event)) {
             if (event.type == sf::Event::Closed) {
